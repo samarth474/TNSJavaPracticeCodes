@@ -1,4 +1,4 @@
-package com.samarth.assignment01.employees;
+package com.samarth.assessment01.employees;
 
 
 public class Employee {
