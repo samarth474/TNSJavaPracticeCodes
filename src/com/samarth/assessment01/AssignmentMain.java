@@ -1,6 +1,7 @@
-import com.samarth.assignment.employees.Developer;
-import com.samarth.assignment.employees.Manager;
-import com.samarth.assignment.utilities.Employeedutilities;
+package com.samarth.assessment01;
+import com.samarth.assignment01.employees.Developer;
+import com.samarth.assignment01.employees.Manager;
+import com.samarth.assignment01.utilities.Employeedutilities;
 
 public class AssignmentMain {
 

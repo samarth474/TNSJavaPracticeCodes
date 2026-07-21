@@ -1,6 +1,6 @@
-package com.samarth.assignment.utilities;
+package com.samarth.assignment01.utilities;
 
-import com.samarth.assignment.employees.Employee;
+import com.samarth.assignment01.employees.Employee;
 
 // Utility class for employee operations.
  
