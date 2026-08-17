@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Dusk Till Dawn",
+    "artist": "ZAYN ft. Sia",
+    "src": "assets/audio/dusk-till-dawn.mp3",
+    "cover": "assets/covers/dusk-till-dawn.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Sapphire",
+    "artist": "Ed Sheeran",
+    "src": "assets/audio/sapphire.mp3",
+    "cover": "assets/covers/sapphire.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Until I Found You",
+    "artist": "Stephen Sanchez",
+    "src": "assets/audio/until-i-found-you.mp3",
+    "cover": "assets/covers/until-i-found-you.jpg"
+  },
+  {
+    "id": 4,
+    "title": "As It Was",
+    "artist": "Harry Styles",
+    "src": "assets/audio/as-it-was.mp3",
+    "cover": "assets/covers/as-it-was.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Attention",
+    "artist": "Charlie Puth",
+    "src": "assets/audio/attention.mp3",
+    "cover": "assets/covers/attention.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Lovely",
+    "artist": "Billie Eilish & Khalid",
+    "src": "assets/audio/lovely.mp3",
+    "cover": "assets/covers/lovely.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "src": "assets/audio/blinding-lights.mp3",
+    "cover": "assets/covers/blinding-lights.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Memories",
+    "artist": "Maroon 5",
+    "src": "assets/audio/memories.mp3",
+    "cover": "assets/covers/memories.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Riptide",
+    "artist": "Vance Joy",
+    "src": "assets/audio/riptide.mp3",
+    "cover": "assets/covers/riptide.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Arcade",
+    "artist": "Duncan Laurence",
+    "src": "assets/audio/arcade.mp3",
+    "cover": "assets/covers/arcade.jpg"
+  }
+]
