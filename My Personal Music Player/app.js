@@ -4,12 +4,16 @@ let filteredSongs = [];
 let currentSongIndex = 0;
 let isPlaying = false;
 let activeTab = 'playlist'; // playlist, favorites, recent
+let shuffle = false;
+let repeat = false;
 
 // Player Variables
 const audioPlayer = document.getElementById('audio-player');
 const playBtn = document.getElementById('play-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const shuffleBtn = document.getElementById('shuffle-btn');
+const repeatBtn = document.getElementById('repeat-btn');
 const seekBar = document.getElementById('seek-bar');
 const volumeBar = document.getElementById('volume-bar');
 const volumeLabel = document.getElementById('volume-label');
@@ -88,11 +92,22 @@ playBtn.addEventListener('click', togglePlay);
 
 // Next / Previous
 function nextSong() {
-  let index = currentSongIndex + 1;
-  if (index >= songs.length) {
-    index = 0;
+  let index;
+
+  if (shuffle) {
+  do {
+    index = Math.floor(Math.random() * songs.length);
+  } while (index === currentSongIndex && songs.length > 1);
+} else {
+    index = currentSongIndex + 1;
+
+    if (index >= songs.length) {
+      index = 0;
+    }
   }
+
   loadSong(index);
+
   if (isPlaying) {
     audioPlayer.play().catch(() => {});
   }
@@ -111,9 +126,26 @@ function prevSong() {
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
+// Shuffle
+shuffleBtn.addEventListener('click', () => {
+  shuffle = !shuffle;
+  shuffleBtn.classList.toggle('active', shuffle);
+});
+// Repeat
+repeatBtn.addEventListener('click', () => {
+  repeat = !repeat;
+  repeatBtn.classList.toggle('active', repeat);
+});
 
-// Automatically play next song on end
-audioPlayer.addEventListener('ended', nextSong);
+// Automatically play next song or repeat current song
+audioPlayer.addEventListener('ended', () => {
+  if (repeat) {
+    audioPlayer.currentTime = 0;
+    audioPlayer.play().catch(() => {});
+  } else {
+    nextSong();
+  }
+});
 
 // Progress Bar
 audioPlayer.addEventListener('timeupdate', () => {
@@ -347,3 +379,11 @@ if (SpeechRecognition) {
   voiceSearchBtn.style.display = 'none';
   voiceStatus.textContent = 'Voice Search not supported in this browser.';
 }
+// Visitor Counter
+let visitorCount = localStorage.getItem('visitorCount') || 0;
+
+visitorCount++;
+
+localStorage.setItem('visitorCount', visitorCount);
+
+document.getElementById('visitor-count').textContent = visitorCount;

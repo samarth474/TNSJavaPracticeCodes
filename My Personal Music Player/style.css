@@ -68,6 +68,7 @@ body {
   border-radius: 6px;
   padding: 8px 12px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .search-bar button:hover {
@@ -120,6 +121,7 @@ body {
   padding: 6px 16px;
   font-size: 13px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .favorite-btn.active {
@@ -167,12 +169,16 @@ body {
   font-size: 20px;
   cursor: pointer;
   color: white;
+  transition: 0.2s ease;
 }
 
 .ctrl-btn:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-
+.ctrl-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
 .play-pause-btn {
   background: rgba(255, 255, 255, 0.15);
   width: 60px;
@@ -225,6 +231,14 @@ body {
   color: #fff;
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
   font-weight: bold;
+}
+
+.visitor-counter {
+  text-align: center;
+  font-size: 12px;
+  color: #a0a0c0;
+  padding: 8px;
+  margin-bottom: 8px;
 }
 
 .list-content {
